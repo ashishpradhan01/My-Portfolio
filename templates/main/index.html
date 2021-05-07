@@ -1,0 +1,48 @@
+{% extends 'main\base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="container">
+    <h2 class="center-align">About Me 👨‍💻</h2>
+    <div class="row">
+        <div class="col s12 m4">
+            <div class="card black card-panel hoverable">
+                <div class="card-content white-text center-align">
+                    <img src="{%static 'assets\images\ashish-pradhan-01.png'%}" alt="Ashish Pradhan Image"
+                        class="circle responsive-img materialboxed"><br>
+                    </p>Faridabad · <a href="tel:+91817XXXXXX0">📞817XXXXXX0</a></p>
+                    <span>📧<a href="mailto:ashishprdhan@gmail.com">ashishprdhan@gmail.com</a></span>
+                </div>
+                <div class="card-action center-align">
+                    <a class="card-action-links" href="https://github.com/ashishpradhan01" target="_blank">GitHub</a>
+                    <a class="card-action-links" href="https://www.linkedin.com/in/ashish-pradhan-2b19b9152"
+                        target="_blank">Linkedin</a>
+                </div>
+            </div>
+        </div>
+        <div class="col s12 m8">
+            <div class="card black hoverable">
+                <div class="card-content white-text">
+                    <span class="card-title">About Ashish Pradhan</span>
+                    <p>Passionate about learning new Technology and Developing Softwares. A strong leader who works well under pressure, and exudes positivity. Able to effectively self-manage independent projects, as well as collaborate as part of a productive team.
+Proficient in various platforms, programming languages.</p><br>
+                    <span class="card-title">Education</span>
+                    <p>YEAR: 2016 - 2020<br>Bachelor of Technology in Computer Science</p>
+                </div>
+                <div class="card-action">
+                    <a href="{% url 'projects' %}">My Personal Projects</a>
+                    <a href="{% url 'languages' %}">Languages I Know</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}
+
+{%block script%}
+<script> document.addEventListener('DOMContentLoaded', function () {
+        var elems = document.querySelectorAll('.materialboxed');
+        var instances = M.Materialbox.init(elems);
+    });
+</script>
+{%endblock%}

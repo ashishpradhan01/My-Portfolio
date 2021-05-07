@@ -1,0 +1,30 @@
+{% extends 'main\base.html' %}
+{% load static %}
+{% block content %}
+<h2 class="center-align">Languages I Know 💪</h2>
+<div class="container languages-collection">
+    <ul class="collection">
+        <li class="collection-item avatar">
+            <img src="{%static "assets\icons\python-icon.png"%}" alt="Python-Icon" class="circle">
+            <span class="title"><b>Python</b></span>
+            <p class="languages-collection-items">Python is an interpreted, object-oriented, high-level programming language with dynamic semantics.</p>
+        </li>
+        <li class="collection-item avatar">
+            <img src="{%static "assets\icons\kotlin-icon.png"%}" alt="Python-Icon" class="circle">
+            <span class="title"><b>Kotlin</b></span>
+            <p class="languages-collection-items">Kotlin is a cross-platform, statically typed, general-purpose programming language with type inference.</p>
+        </li>
+        <li class="collection-item avatar">
+            <img src="{%static "assets\icons\java-icon.png"%}" alt="Python-Icon" class="circle">
+            <span class="title"><b>Java</b></span>
+            <p class="languages-collection-items">Java is a class-based, object-oriented programming language, Java applications are typically compiled to bytecode that can run on any (JVM) regardless of the underlying computer architecture.</p>
+        </li>
+        <li class="collection-item avatar">
+            <img src="{%static "assets\icons\technical-skills.png"%}" alt="Python-Icon" class="circle">
+            <span class="title"><b>Technical skills</b></span><br>
+            <span class="languages-collection-items">Algorithm and Data Structures, Android App Development, Django Framework, Rest APIs, Git.</span>
+        </li>
+    </ul>
+</div>
+
+{% endblock content %}
