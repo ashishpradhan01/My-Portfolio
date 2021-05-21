@@ -11,7 +11,8 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
 from pathlib import Path
-
+from decouple import config
+import dj_database_url
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -20,18 +21,15 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'fs_%*j7*rp9da%e&pl)1+x1djp5_a3e=^3+0^imhzp8dhq21(-'
+SECRET_KEY = config('SECRET_KEY') 
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = config('DEBUG', default=False, cast=bool)
 
 ALLOWED_HOSTS = [
     'my-portfolio-online.herokuapp.com',
-<<<<<<< HEAD
-    '127.0.0.1'
-=======
     '127.0.0.1',
->>>>>>> 362ad3dc2521d7c818edb40d692db8daeb11e794
 ]
 
 
@@ -85,11 +83,17 @@ WSGI_APPLICATION = 'portfolio.wsgi.application'
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+    'default': dj_database_url.config(
+        default=config('DATABASE_URL')
+    )
 }
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
 
 
 # Password validation
@@ -140,3 +144,4 @@ STATICFILES_DIRS = (
 # project we are using django to serve using white noise. 
 # project we are using django to serve using white noise.
 STATIC_ROOT = BASE_DIR / 'staticfiles'
+STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
