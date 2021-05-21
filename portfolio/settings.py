@@ -27,7 +27,11 @@ DEBUG = False
 
 ALLOWED_HOSTS = [
     'my-portfolio-online.herokuapp.com',
+<<<<<<< HEAD
     '127.0.0.1'
+=======
+    '127.0.0.1',
+>>>>>>> 362ad3dc2521d7c818edb40d692db8daeb11e794
 ]
 
 
