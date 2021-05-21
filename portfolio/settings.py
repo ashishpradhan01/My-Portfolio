@@ -144,4 +144,4 @@ STATICFILES_DIRS = (
 # project we are using django to serve using white noise. 
 # project we are using django to serve using white noise.
 STATIC_ROOT = BASE_DIR / 'staticfiles'
-STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
+# STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
