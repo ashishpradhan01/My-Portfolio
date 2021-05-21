@@ -4,18 +4,18 @@
 <h2 class="center-align">Personal Projects 🐱‍👤</h2>
 <div class="container project-collapsible">
     <ul class="collapsible popout">
-        <li>
-            <div class="collapsible-header"><i class="material-icons">android</i><b>FavDish – Android Application</b></div>
-            <div class="collapsible-body"><span class="project-collapsible-items">FavDish is an Online Recipe Android App, where user can save or upload own recipes. FavDish built using kotlin, jetpack and also uses the food APIs to fetch recipes. Room Database used to store user recipes.</span></div>
-        </li>
-        <li>
-            <div class="collapsible-header"><i class="material-icons">language</i><b>Customer relationship management – Django Web Application</b></div>
-            <div class="collapsible-body"><span class="project-collapsible-items">Customer relationship management is an Online Django application, which aims to store customer information, identify sales. CRM tool built using Python, Django, Html and CSS.<br><a href="https://github.com/ashishpradhan01/Django-CRM-WebApp">Link to Project</a></span></div>
-        </li>
-        <li>
-            <div class="collapsible-header"><i class="material-icons">face</i><b>Face Detection System – Python Application</b></div>
-            <div class="collapsible-body"><span class="project-collapsible-items">Face Detection System is an offline face detection with haar cascade, fetching details. Face detection is built using opencv module. GUI built with tkinter-gui and php mysql database used to store person information.<br><a href="https://github.com/ashishpradhan01/Face-Detection-System">Link to Project</a></span></div>
-        </li>
+
+        {% for project in projects %}
+            <li>
+                <div class="collapsible-header"><i class="material-icons">{{project.icon}}</i><b>{{project.title}}</b></div>
+                <div class="collapsible-body"><span class="project-collapsible-items">{{project.description}}
+                {% if project.link is not None %}
+                    <br><a href={{project.link}}>Link to Project</a>
+                {% endif %}
+                </span></div>
+            </li>
+        {% endfor %}
+
         <li>
             <div class="collapsible-header"><i class="material-icons">link</i><b>Checkout Out More Personal Projects...</b></div>
             <div class="collapsible-body"><span class="project-collapsible-items">GitHub : <a href="https://github.com/ashishpradhan01?tab=repositories">More Projects</a></span></div>
