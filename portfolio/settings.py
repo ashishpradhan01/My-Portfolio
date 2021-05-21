@@ -25,11 +25,7 @@ SECRET_KEY = 'fs_%*j7*rp9da%e&pl)1+x1djp5_a3e=^3+0^imhzp8dhq21(-'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-<<<<<<< HEAD
 ALLOWED_HOSTS = [
-=======
-ALLOWED_HOSTS = ALLOWED_HOSTS = [
->>>>>>> 792580d3a263aafc9e81c6607e010ae5d46847c9
     'my-portfolio-online.herokuapp.com',
     '127.0.0.1:8000',
 ]
