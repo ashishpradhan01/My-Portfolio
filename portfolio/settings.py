@@ -133,9 +133,6 @@ STATICFILES_DIRS = (
 #Production-level  -- When putting this on S3 bucket change BASE_DIR to s3 bucket link so all staticfile collected in that bucket,
 # but for now we are collecting static files in django by using whitenoise to serve because django does not know how to serve these
 # files, when we are at production level it is recommended to use third party server to serve static files like AWS S3 bucket, but 
-<<<<<<< HEAD
 # project we are using django to serve using white noise. 
-=======
 # project we are using django to serve using white noise.
->>>>>>> 792580d3a263aafc9e81c6607e010ae5d46847c9
 STATIC_ROOT = BASE_DIR / 'staticfiles'
